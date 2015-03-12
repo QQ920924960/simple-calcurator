@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+        <head>
+                <meta charset="utf-8"/>
+                <title>我的计算器</title>
+                <style type="text/css">
+                        #content{
+                                background:#2cbcd6;
+                                width:200px;
+                                text-align:center;
+                                margin: 100px auto;
+                        }
+                        .btn{
+                                width: 40px;
+                                height: 24px;
+                                padding: 0;
+                                margin: 0 1px 2px 1px;
+                        }
+                        #txt_1{
+                                margin: 3px 0 2px 0;
+                                width: 188px;
+                        }
+                        #banquan{
+                                font-size: 12px;
+                        }
+                </style>
+                <script type="text/javascript">
+                        var num;
+                        function fun0(){
+                                myForm.txt_1.value+='0';
+                                num=0;
+                        }
+                        function fun1(){
+                                myForm.txt_1.value+='1';
+                                num=1;
+                        }
+                        function fun2(){
+                                myForm.txt_1.value+='2';
+                                num=2;
+                        }
+                        function fun3(){
+                                myForm.txt_1.value+='3';
+                                num=3;
+                        }
+                        function fun4(){
+                                myForm.txt_1.value+='4';
+                                num=4;
+                        }
+                        function fun5(){
+                                myForm.txt_1.value+='5';
+                                num=5;
+                        }
+                        function fun6(){
+                                myForm.txt_1.value+='6';
+                                num=6;
+                        }
+                        function fun7(){
+                                myForm.txt_1.value+='7';
+                                num=7;
+                        }
+                        function fun8(){
+                                myForm.txt_1.value+='8';
+                                num=8;
+                        }
+                        function fun9(){
+                                myForm.txt_1.value+='9';
+                                num=9;
+                        }
+                        function fun_Backspace(){
+                                  myForm.txt_1.value=myForm.txt_1.value.slice(0,-1);
+                        }
+                        function fun_bac(){
+                                myForm.txt_1.value=(-1)*myForm.txt_1.value;
+                        }
+                        function fun_qiuyu(){
+                                myForm.txt_1.value+='%';
+                        }
+                        function fun_CE(){
+                                myForm.txt_1.value='';
+                        }
+                        function fun_add(){
+                                myForm.txt_1.value+='+';
+                        }
+                        function fun_sub(){
+                                myForm.txt_1.value+='-';
+                        }
+                        function fun_mul(){
+                                myForm.txt_1.value+='*';
+                        }
+                        function fun_point(){
+                                myForm.txt_1.value+='.';
+                        }
+                        function fun_eql(){
+                                myForm.txt_1.value=eval(myForm.txt_1.value);
+                        }
+                        function fun_div(){
+                                myForm.txt_1.value+='/';
+                        }
+                        function fun_clear(){
+                                document.myForm.txt_1.value="";
+                        }
+                </script>
+        </head>
+        <body onload="fun_clear()">
+        <form name="myForm">
+                <div id="content">
+                        <div id="banquan">作者：QQ920924960</div>
+                        <input type="text" value="0" id="txt_1" class="txt"/><br/>
+                        <input type="button" value="BC" class="btn" onclick="fun_Backspace()" id="btn_BS"/>
+                        <input type="button" value="+/-" class="btn" onclick="fun_bac()" id="btn_MA"/>
+                        <input type="button" value="%" class="btn" onclick="fun_qiuyu()" id="btn_C"/>
+                        <input type="button" value="CE" class="btn" onclick="fun_CE()" id="btn_CE"/><br/>
+                        <input type="button" value="7" class="btn" onclick="fun7()" id="btn_7"/>
+                        <input type="button" value="8" class="btn" onclick="fun8()" id="btn_8"/>
+                        <input type="button" value="9" class="btn" onclick="fun9()" id="btn_9"/>
+                        <input type="button" value="+" class="btn" onclick="fun_add()" id="btn_Addition"/><br/>
+                        <input type="button" value="4" class="btn" onclick="fun4()" id="btn_7"/>
+                        <input type="button" value="5" class="btn" onclick="fun5()" id="btn_7"/>
+                        <input type="button" value="6" class="btn" onclick="fun6()" id="btn_7"/>
+                        <input type="button" value="-" class="btn" onclick="fun_sub()" id="btn_Subtraction"/><br/>
+                        <input type="button" value="1" class="btn" onclick="fun1()" id="btn_7"/>
+                        <input type="button" value="2" class="btn" onclick="fun2()" id="btn_7"/>
+                        <input type="button" value="3" class="btn" onclick="fun3()" id="btn_7"/>
+                        <input type="button" value="*" class="btn" onclick="fun_mul()" id="btn_Multiplication"/><br/>
+                        <input type="button" value="0" class="btn" onclick="fun0()" id="btn_0"/>
+                        <input type="button" value="." class="btn" onclick="fun_point()" id="btn_Point"/>
+                        <input type="button" value="=" class="btn" onclick="fun_eql()" id="btn_Equal"/>
+                        <input type="button" value="/" class="btn" onclick="fun_div()" id="btn_Division"/>
+                </div>        
+        </form>
+        </body>
+</html>
